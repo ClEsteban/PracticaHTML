@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practica</title>
+</head>
+<body>
+    <h1>Primer Heading</h1>
+    <h2>Segundo Heading</h2>
+    <h3>Tercer Heading</h3>
+    <h4>Cuarto Heading</h4>
+    <h5>Quinto Heading</h5>
+    <h6>Sexto Heading</h6>
+    <p> Parrafo nro 1</p>
+    <p> Parrafo nro 2</p>
+
+    <form action="/formulario" method="POST">
+        <label for="nombre">Nombre</label>
+        <input value="Mario" type="text" id="nombre" name="nombre" placeholder="Nombre"/>
+        <br>
+        <br>
+        <!-- type puede tener: text por defecto, submit es un boton
+            email, password, checkbox,radio, file, para que de a cargar un archivo
+            placeholder pone texto dentro del recuadro como guia
+            for referencia al id, name es el key del diccionario
+        -->
+        <label for="apellido">Apellido</label>
+        <input value="Perez" type="text" id="apellido" name="apellido" placeholder="Apellido"/>
+        <br>
+        <br>
+        <label for="comentario">Comentarios</label>
+        <br>
+        <textarea cols="50" rows="10" id="comentario" placeholder="ingrese comentario" name="comentario">Contenido por defecto</textarea>
+        <!-- textarea es caja de texto rows es para asignar un tamaño a la caja en cantidad de filas y cols columnas -->
+        <br>
+        <input type="submit"/>
+        <button type="submit">Tipo Enviar</button><!--button es por defecto submit, se usa con javascript-->
+        <button type="button"><img src="img.jpg" width="30" height="30"/>Tipo Button</button><!--si se pone solo button no hace nada, hay que especificar su uso-->
+        <button type="Reset">Tipo Reset</button><!--pone el formulario en los valores por defecto-->
+        <!--la etiqueta button puede incluir imagenes-->
+    </form>    
+    <hr>
+    <!-- <hr> es un separador -->
+    <h2>Otro Heading</h2>
+    <p> Este texto es <span style="color:blue">mas largo</span> y es para mostrar <br> la etiqueta de span! </p>
+    <!-- span es para seleccionar una fraccion de texto y darle estilo, la etiqueta br es para hacer un salto de linea-->
+    <a target="_blank" href="https://www.google.com"> Ir a google </a> <!-- target="_blank" es para que abra una ventana nueva-->
+    <!-- <a> es la etiqueta de hypervinculo tambien llamada anchor -->
+    <br>
+    <img src="img.jpg" width="300" height="300"/>
+</body>
+</html>
