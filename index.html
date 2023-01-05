@@ -2,21 +2,93 @@
 <html>
 <head>
     <title>Practica</title>
+    <!-- esto es CSS y el estilo que se aplique se va a aplicar a la table, th y td es para ahorra poner en todo
+    <table style="border: 1px solid black;">
+    -->
+    <style>
+        table, th, td {border: 1px solid black;}
+    </style>
 </head>
 <body>
+    <!-- tr es table row, fila, th es table header, td son items de la tabla-->
+    <!-- thead es para agrupar las filas que son cabecera, tbody es para agrupar las que son body, sirve para que algunos
+    exploradores habiliten el scroll independiente de los elementos body y head, y tfoot para el pie de la tabla-->
+    <table style="width: 500px;"> <!-- en ancho de la tabla tambien puede ser en porcentaje-->
+        <thead> <!-- thead sirve para agrupar los elementos que son cabecera de la tabla-->
+        <tr>
+            <th>Precio</th>
+            <th>Producto</th>
+        </tr>
+        </thead>
+        <!-- tbody sirve para agrupar los elementos que son el cuerpo de la tabla -->
+        <tbody>
+        <tr>
+            <td>alimento</td>
+            <td>gratis</td>
+        </tr>
+        <tr>
+            <td>juguete</td>
+            <td>120 USD</td>
+        </tr>
+        <tr>
+            <td>elemento mas largo</td>
+            <td>240 USD</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td>TOTAL: 360 USD</td>
+        </tfoot>
+    </table>
+
+    <!-- ul (unordered list) es lista no ordenada, li es list item-->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+    <!-- ol es ordered list -->
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <!--se le puede poner el valor de comienzo con value-->
+        <li value="50">Elemento 3</li>
+        <li>Elemento 4</li>
+        <!-- lista anidada-->
+        <li>
+            <ol> <!--tambien se pede cambiar el estilo directo en la ol-->
+                <li style="list-style-type:lower-alpha">Subelemento 1</li>
+                <li>Subelemento 2</li>
+                <li>Subelemento 3</li>
+            </ol>
+        </li>
+    </ol>
+
+
+    <!-- la etiqueta heading no debe usarse para agrandar la fuente, solo como titulo-->
     <h1>Primer Heading</h1>
     <h2>Segundo Heading</h2>
     <h3>Tercer Heading</h3>
     <h4>Cuarto Heading</h4>
     <h5>Quinto Heading</h5>
     <h6>Sexto Heading</h6>
+    <!-- la etiqueta de parrafo -->
     <p> Parrafo nro 1</p>
     <p> Parrafo nro 2</p>
 
-    <form action="/formulario" method="POST">
-        <label for="nombre">Nombre</label>
+    <!--///////////////FORMULARIOS//////////////////////-->
+
+    <form action="/formulario" method="POST"> <!--action es a donde va a redireccionar el formulario 
+    el method puede ser POST o GET, sino se pone nada se pone GET (a traves de la url) por default-->
+        <label for="nombre">Nombre</label> <!-- es la etiqueta de la entrada del formulario con el for lo asiganamos para que al presionar el label entre en el campo (es el id del input)-->
         <input value="Mario" type="text" id="nombre" name="nombre" placeholder="Nombre"/>
+        <!-- name va a usarse como llave en el diccionario que se envie; placeholder llena el campo con indicador de referencia gris suave
+        type puede ser: text(por defecto), submit, email, password, radio, checkbox, file....
+        value precarga un valor en el campo(diferente a placeholder, se llena con un valor realmente)
+        -->
         <br>
+        <!-- br es un salto de linea -->
         <br>
         <!-- type puede tener: text por defecto, submit es un boton
             email, password, checkbox,radio, file, para que de a cargar un archivo
@@ -24,13 +96,13 @@
             for referencia al id, name es el key del diccionario
         -->
         <label for="apellido">Apellido</label>
-        <input value="Perez" type="text" id="apellido" name="apellido" placeholder="Apellido"/>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido"/>
         <br>
         <br>
         <label for="comentario">Comentarios</label>
         <br>
         <textarea cols="50" rows="10" id="comentario" placeholder="ingrese comentario" name="comentario">Contenido por defecto</textarea>
-        <!-- textarea es caja de texto rows es para asignar un tamaño a la caja en cantidad de filas y cols columnas -->
+        <!-- textarea es caja de texto rows es para asignar un tamaño a la caja en cantidad de filas y cols columnas, no usa el atributo value sino que se llena entre las etiquetas -->
         <br>
         <input type="submit"/>
         <button type="submit">Tipo Enviar</button><!--button es por defecto submit, se usa con javascript-->
@@ -39,13 +111,13 @@
         <!--la etiqueta button puede incluir imagenes-->
     </form>    
     <hr>
-    <!-- <hr> es un separador -->
+    <!-- <hr> es una linea separador -->
     <h2>Otro Heading</h2>
     <p> Este texto es <span style="color:blue">mas largo</span> y es para mostrar <br> la etiqueta de span! </p>
     <!-- span es para seleccionar una fraccion de texto y darle estilo, la etiqueta br es para hacer un salto de linea-->
     <a target="_blank" href="https://www.google.com"> Ir a google </a> <!-- target="_blank" es para que abra una ventana nueva-->
     <!-- <a> es la etiqueta de hypervinculo tambien llamada anchor -->
     <br>
-    <img src="img.jpg" width="300" height="300"/>
+    <img src="img.jpg" width="300" height="300"/> <!-- si se pone el width solo la relacion aspeto se mantiene-->
 </body>
 </html>

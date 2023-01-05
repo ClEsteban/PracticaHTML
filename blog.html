@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<center>
+<body>
+    <!-- header se usa para agrupar links se pueden colocar 
+        cuantas quieras, pero no una dentro de otro header o footer-->
+    <header>
+        <!-- el id es el identificador unico y se usa para poder asignar estilos-->
+        <!--Atributo: todos los parametros que se le pasan a las etiquetas y sirven para
+        poder interactuar con los elementos-->
+        <!-- si quiero que varios elementos compartan estilos (utilizando los selectores) debo usar el 
+        atributo de class y no el de ID-->
+        <h1 id="titulo"> Blog Ejercicio</h1>
+    </header>
+    <div>
+        <!-- div era la etiqueta para dividir secciones antes de section y es vieja, se puede anidar-->
+        <p>soy un parrafo dentro de un div</p>
+    </div>
+    <section>
+        <!--article se usa para definir un contenido independiente-->
+        <article class="post">
+            <h2>Titulo del Post</h2>
+            <p>Descripcion de mi Post</p>
+            <img src="img.jpg" width="300"/>
+            <p>Texto del articulo, y es tecto de prueba</p>
+        </article>
+        <article class="post">
+            <h2>Titulo del Post 2</h2>
+            <p>Descripcion de mi Post 2</p>
+            <img src="img2.jpg" width="300"/>
+            <p>Texto del articulo, y es tecto de prueba</p>
+        </article>
+        <article class="post">
+            <h2>Titulo del Post 3</h2>
+            <p>Descripcion de mi Post 3</p>
+            <img src="img3.jpg" width="300"/>
+            <p>Texto del articulo, y es tecto de prueba</p>
+        </article>
+    </section>
+
+    <footer>
+        <!-- con el # y un id se pude hacer un link para ir a esa 
+        seccion sin refrescar la pagina-->
+        <a href="#titulo">Volver al titulo</a> 
+        <!-- <a> es de anchor y es para poner links-->
+        <a href="mailto:example@mail.com">Contacto: example@mail.com</a>
+        <p>Copyright 2023</p>
+    </footer>
+    
+</body>
+</center>
+</html>
