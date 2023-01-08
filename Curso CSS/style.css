@@ -1,0 +1,105 @@
+#titulo {
+    color:tomato;
+}
+
+.texto {
+    color:blue;
+}
+
+p.especial {
+    color:aquamarine;
+}
+
+div p {
+    color:mediumseagreen;
+}
+
+div h2, div h3 {
+    color:brown;
+}
+
+* {
+    font-size: 24px;
+    /*color:black;*/
+}
+
+/* el color se puede elegir con RGB(de 0 a 255), nombre, con tres digitos(#000, cada cero es uno de los colores) 
+o hexadecimal(#000000 los primeros dos son rojo, etc 
+RGB: color:rgb(47, 138, 109)
+3digitos: color:#f00
+hexadecimal: color:#f0f000
+nombre: color:black
+*/
+.color {
+    border-style:solid;
+    border-color:blue;
+    border-radius: 5px;
+    border-width: 5px; /* las medidas absolutas pueden ser en px, cm, mm, in(inches), pt(point), pc(picas 12pt)*/
+    /* las medidas relativas son: em(dos veces el tamaño de la fuente que se esta usando
+    rem: es igual pero usa de referencia el elemento raiz (la etiqueta html en este caso, tamaño defecto de 16px*/
+    /* border: 5px black solid  */
+    /* con ctrl+sapace vemos las alternativas disponibles
+    doted
+    dashed
+    solid
+    double
+    groove
+    ridge
+    inset
+    outset
+    none
+    hidden
+    */
+}
+/* asi se escriben los comentarios en css */
+#fondo {
+    background-color: rgba(0,0,0,0.3); /* rgba tambien permite pasar la transparencia tiene que ser con coma*/
+    opacity: 0.3; /*para dar la transparencia al elemento completo, no solo al fondo*/
+    background-image: url('img2.jpg');
+    height: 200px;
+    background-size: 100px 100px; /*puede ser: auto, cover(se adapta el tamaño), contain... tambien pueden ser el
+    alto y ancho: 440px 200px*/
+    background-repeat: no-repeat; /*puede ser: repet-x(eje horizontal) repeat-y(eje vertical)*/
+    background-position: center top;/*left,right,center y top,center,bottom, tmabien se le pueden dar
+    dimenciones*/
+    /*tambien se puede usar solo la propiedad de background*/
+    background: #f00 url('img2.jpg') repeat-y center bottom / 100px 100px;
+}
+
+.margen {
+    background-color: chocolate;
+    margin: 15px 20px 25px 30px; /*puede ser top, right, bottom, left o se puden poner directo los valores*/
+    padding: 30px 25px 20px 15px;
+    border: solid 10px black;
+    height: 100px;
+    width: 50px;
+    overflow: hidden; /*o visible, si los elementos no entran en el recuadro se ocultan o lo traspasan
+    tambin con scroll te da barras de navegacion
+    */
+    outline: 1px solid red /*es un borde que se coloca por fuera del elemento*/
+}
+
+.text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center; /* justify, */
+    text-decoration: underline;/*none, underline, line-through, overline*/
+    text-shadow: 3px 5px 5px blue;/*el primer valor es cuanto mover la sobra a la derecha, el segundo es 
+    cuanto hacia abajoel tercero es la cantidad de blur*/
+}
+
+/*el orden de los estados de los links tiene que respetarse: link, visited, hover, active*/
+/* a para seleccionar todos los <a> y link para elegir el estado, con link es cuando no ha sido visitado */
+a:link {
+    color:blueviolet
+}
+a:visited {
+    color:red
+}
+/* hover es cuando le pasas el mouse por arriba*/
+a:hover {
+    color:yellow
+}
+/* active es cuando estas pinchando*/
+a:active {
+    color:blueviolet
+}
