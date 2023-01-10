@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SAR TTyC A13D</title>
+    <title>SSAR TTyC A13D</title>
     <style>
         table, th, td {border: 2px solid black;border-collapse: collapse;}
     </style>
 </head>
 <body>
-    <h1>Pasadas de SAR (TT&C) con antena de 13m DATRON</h1>
+    <h1>Pasadas de SSAR (TT&C) con antena de 13m DATRON</h1>
     <form>
         Fecha: <input type="date" name="fecha"/> <!--Fecha, Hora y operador deberian ser automaticas-->
         Hora: <input tyoe="time" name="hora"/>
         <hr>
-        Satelite: <input value="SAR" type="text" name="satelite"/>
+        Satelite: <input value="SSAR" type="text" name="satelite"/>
         Orbita: <input type="number" name="orbita"/>
         <hr>
         Operador: <input type="text" name="Operador"/>
@@ -80,13 +80,12 @@
                     <li> Cadena de DownConverter: <b>2230 MHz</b></li>
                 </td>
                 <td><input type="checkbox" name="7"/></td>
-            </tr>
+            </tr>            
             <tr>
                 <td>08</td>
                 <td>VER</td>
                 <td>
-                    Comprobar que al AOS - 5 minutos, se encuentre cargado el CTX
-                    acorde a la pasada.
+                    Verificar que aproximadamente 3 minutos antes del AOS se levanten los STC
                 </td>
                 <td><input type="checkbox" name="8"/></td>
             </tr>
@@ -94,7 +93,8 @@
                 <td>09</td>
                 <td>VER</td>
                 <td>
-                    Verificar que aproximadamente 3 minutos antes del AOS se levanten los STC
+                    Verificar en el LMP de SAR que el CLCW sample se corresponda con el de
+                    la contact table
                 </td>
                 <td><input type="checkbox" name="9"/></td>
             </tr>
@@ -177,7 +177,7 @@
                 <td>17</td>
                 <td>VER</td>
                 <td>
-                    Verificar el encendido del carrier
+                    Verificar el encendido del carrier y proceso de Sweeping
                 </td>
                 <td><input type="checkbox" name="17"/></td>
             </tr>
@@ -185,7 +185,7 @@
                 <td>18</td>
                 <td>VER</td>
                 <td>
-                    Verificar el inicio del proceso de Sweeping
+                    Verificar que la modulacion este encendida
                 </td>
                 <td><input type="checkbox" name="18"/></td>
             </tr>
@@ -193,43 +193,36 @@
                 <td>19</td>
                 <td>VER</td>
                 <td>
-                    Verificar que la modulacion este encendida
+                    Verificar el final del proceso de Sweeping (Return to Zero)
+                    y el CLCW lock
                 </td>
                 <td><input type="checkbox" name="19"/></td>
             </tr>
             <tr>
                 <td>20</td>
-                <td>VER</td>
+                <td>DO</td>
                 <td>
-                    Verificar el final del proceso de Sweeping (Return to Zero)
+                    Informar a GSN el estado de CLCW locked<br>
+                    Voice Loop "<b>Fucino, the CLCW is Locked</b>"
                 </td>
                 <td><input type="checkbox" name="20"/></td>
             </tr>
             <tr>
                 <td>21</td>
-                <td>DO</td>
+                <td>VER</td>
                 <td>
-                    Informar a GSN el estado de CLCW locked<br>
-                    Voice Loop "<b>Fucino, the CLCW is Locked</b>" [Ref.05]
+                    Cerca de los 5 grados descendentes verificar el apagado del carrier
                 </td>
                 <td><input type="checkbox" name="21"/></td>
             </tr>
             <tr>
                 <td>22</td>
-                <td>VER</td>
-                <td>
-                    Cerca de los 5 grados descendentes verificar el apagado del carrier
-                </td>
-                <td><input type="checkbox" name="22"/></td>
-            </tr>
-            <tr>
-                <td>23</td>
                 <td>DO</td>
                 <td>
                     Verificar y Notificar el LOS (Loss Of Signal)<br>
                     Voice Loop "<b>Fucino, we are in LOS</b>"
                 </td>
-                <td><input type="checkbox" name="23"/></td>
+                <td><input type="checkbox" name="22"/></td>
             </tr>
             <tr>
                 <td></td>
@@ -238,30 +231,30 @@
                 <td></td>
             </tr>
             <tr>
-                <td>24</td>
+                <td>23</td>
                 <td>VER</td>
                 <td>
                     Verificar la generacion de la telemetria offline
+                </td>
+                <td><input type="checkbox" name="23"/></td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>VER</td>
+                <td>
+                    Verificar la transferencia de la telemetria offline
                 </td>
                 <td><input type="checkbox" name="24"/></td>
             </tr>
             <tr>
                 <td>25</td>
-                <td>VER</td>
-                <td>
-                    Verificar la transferencia de la telemetria offline
-                </td>
-                <td><input type="checkbox" name="25"/></td>
-            </tr>
-            <tr>
-                <td>26</td>
                 <td>DO</td>
                 <td>
                     Informar a GSN la realizacion de la transferencia de la
                     telemetria offline<br>
                     Voice Loop "<b>Fucino, the data transfer is completed</b>" [Ref.09]
                 </td>
-                <td><input type="checkbox" name="26"/></td>
+                <td><input type="checkbox" name="25"/></td>
             </tr>
             <tr>
                 <td></td>
