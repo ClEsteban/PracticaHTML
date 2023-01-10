@@ -29,41 +29,134 @@
                 <td>VER</td>
                 <td>Verificar que la pasada este cargada en el "List Activity" del PEC console</td>
                 <td><input type="checkbox" name="1"/></td>
-            </tr>                
+            </tr>
             <tr>
                 <td>02</td>
                 <td>VER</td>
-                <td>Verificar que se ejcuten correctamente las acividades del PEC</td>
+                <td>Verificar que el TILT sea correcto</td>
                 <td><input type="checkbox" name="2"/></td>
             </tr>
             <tr>
                 <td>03</td>
                 <td>VER</td>
-                <td>Verificar que la configuracion de <b>R-XDWNCIF01</b> sea:<br>
-                Frecuencia Banda X: <b>8200.5</b><br>
+                <td>
+                    Verificar que los controladores LMP SAR esten levantados y
+                    con el monitoreo BaseBand y de STC corriendo
                 </td>
                 <td><input type="checkbox" name="3"/></td>
             </tr>
             <tr>
                 <td>04</td>
                 <td>VER</td>
-                <td>Verificar la Matriz <b>R-IFMTX01</b> sea:<br>
-                    <li>IN: 02 - OUT: 08</li>
+                <td>
+                    Verificar que el ejecutor de los controladores este activado
                 </td>
                 <td><input type="checkbox" name="4"/></td>
-            </tr>
+            </tr>                
             <tr>
                 <td>05</td>
                 <td>VER</td>
-                <td>Verificar que el demodulador <b>R-DEMKTSA01</b> este configurado para la mision <b>LANDSAT-8</b></td>
+                <td>
+                    Verificar que se ejecuten correctamente las acividades del PEC
+                </td>
                 <td><input type="checkbox" name="5"/></td>
             </tr>
             <tr>
                 <td>06</td>
                 <td>VER</td>
-                <td>Verificar minutos antes del AOS que empiece la ingestion en <b>R-DEMKTSA01</b>
+                <td>
+                    En el SCC de A13,5m verificar que la configuracion sea
+                    98 Cosmo Skymed
                 </td>
                 <td><input type="checkbox" name="6"/></td>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td>VER</td>
+                <td>
+                    Verificar la configuracion de la cadena de RF. Sobre el view
+                    correspondiente al IDHS seleccionado para la pasada. <br>
+                    <li> Cadena de UpConverter: <b>2053.458 MHz</b></li>
+                    <li> Cadena de DownConverter: <b>2230 MHz</b></li>
+                </td>
+                <td><input type="checkbox" name="7"/></td>
+            </tr>
+            <tr>
+                <td>08</td>
+                <td>VER</td>
+                <td>
+                    Comprobar que al AOS - 5 minutos, se encuentre cargado el CTX
+                    acorde a la pasada.
+                </td>
+                <td><input type="checkbox" name="8"/></td>
+            </tr>
+            <tr>
+                <td>09</td>
+                <td>VER</td>
+                <td>
+                    Verificar que aproximadamente 3 minutos antes del AOS se levanten los STC
+                </td>
+                <td><input type="checkbox" name="9"/></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>VER</td>
+                <td>
+                    Verificar la configuracion de la Matrix de Banda S (<b>R-SMTX01</b>):<br>
+                    Downlink:<br>
+                    <li>RHCP: IN: 01 - OUT: 01</li>
+                    <li>LHCP: IN: 04 - OUT: 02</li>
+                </td>
+                <td><input type="checkbox" name="10"/></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>VER</td>
+                <td>
+                    Verificar la configuracion de la Matrix de Banda S (<b>R-SMTX03</b>):<br>
+                    Uplink:<br>
+                    <li>IDHS1/IDHS2: IN: 04 - OUT: 04</li>                    
+                </td>
+                <td><input type="checkbox" name="11"/></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>VER</td>
+                <td>
+                    Verificar la configuracion de IF Matrix(SCC window):<br>
+                    Downlink:<br>
+                    <li>RHCP: IN: 11 - OUT: 11</li>
+                    <li>LHCP: IN: 12 - OUT: 12</li>
+                    Uplink:<br>
+                    <li>IDHS1: IN: 07 - OUT: 15 o IDHS2: IN: 09 - OUT: 15</li>                     
+                </td>
+                <td><input type="checkbox" name="12"/></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>VER</td>
+                <td>
+                    Verificar el preposicionamiento de la antena, segun azimut
+                    y elevacion inicial
+                </td>
+                <td><input type="checkbox" name="13"/></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>DO</td>
+                <td>
+                    Llamar al numero 522 sobre el telefono IP del Islote de Operaciones
+                </td>
+                <td><input type="checkbox" name="14"/></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>DO</td>
+                <td>
+                    Informar al GSN la cadena configurada <br>
+                    Voice Loop: "<b>Fucino, the IDHS X(X=1 o X=2) is online</b>" [Ref.01]
+                </td>
+                <td><input type="checkbox" name="15"/></td>
             </tr>
             <tr>
                 <td></td>
@@ -72,26 +165,71 @@
                 <td></td>
             </tr>
             <tr>
-                <td>07</td>
+                <td>16</td>
                 <td>VER</td>
-                <td>Verificar que en AOS se empiece a mover la antena y comience la recepcion de senal, mirar
-                    analizador de espectro.
+                <td>
+                    Verificar y notificar el AOS (Adquisition Of Signal).<br>
+                    "<b>Fucino, we are in AOS</b>"
                 </td>
-                <td><input type="checkbox" name="7"/></td>
+                <td><input type="checkbox" name="16"/></td>
             </tr>
             <tr>
-                <td>08</td>
+                <td>17</td>
                 <td>VER</td>
-                <td>Verificar en el demodulador <b>R-DEMKTSA01</b> el estado de lock en verde</td>
-                <td><input type="checkbox" name="8"/></td>
+                <td>
+                    Verificar el encendido del carrier
+                </td>
+                <td><input type="checkbox" name="17"/></td>
             </tr>
             <tr>
-                <td>09</td>
+                <td>18</td>
                 <td>VER</td>
-                <td>Verificar que <b>R-DEMKTSA01</b> comience a ingestar correctamente
-                    y se generan archivos en la carpeta data/cfdp
+                <td>
+                    Verificar el inicio del proceso de Sweeping
                 </td>
-                <td><input type="checkbox" name="9"/></td>
+                <td><input type="checkbox" name="18"/></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>VER</td>
+                <td>
+                    Verificar que la modulacion este encendida
+                </td>
+                <td><input type="checkbox" name="19"/></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>VER</td>
+                <td>
+                    Verificar el final del proceso de Sweeping (Return to Zero)
+                </td>
+                <td><input type="checkbox" name="20"/></td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>DO</td>
+                <td>
+                    Informar a GSN el estado de CLCW locked<br>
+                    Voice Loop "<b>Fucino, the CLCW is Locked</b>" [Ref.05]
+                </td>
+                <td><input type="checkbox" name="21"/></td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>VER</td>
+                <td>
+                    Cerca de los 5 grados descendentes verificar el apagado del carrier
+                </td>
+                <td><input type="checkbox" name="22"/></td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>DO</td>
+                <td>
+                    Verificar y Notificar el LOS (Loss Of Signal)<br>
+                    Voice Loop "<b>Fucino, we are in LOS</b>"
+                </td>
+                <td><input type="checkbox" name="23"/></td>
             </tr>
             <tr>
                 <td></td>
@@ -100,26 +238,31 @@
                 <td></td>
             </tr>
             <tr>
-                <td>10</td>
-                <td>DO</td>
-                <td>Realizar cambio de TILT en caso de ser ncesario</td>
-                <td><input type="checkbox" name="10"/></td>
-            </tr>
-            <tr>
-                <td>11</td>
+                <td>24</td>
                 <td>VER</td>
-                <td>Verificar que minutos despues del LOS se cargue la configuracion
-                    default en <b>R-DEMKTSA01</b>
+                <td>
+                    Verificar la generacion de la telemetria offline
                 </td>
-                <td><input type="checkbox" name="11"/></td>
+                <td><input type="checkbox" name="24"/></td>
             </tr>
             <tr>
-                <td>12</td>
-                <td>DO</td>
-                <td>Completar la hoja de ruta de la pasada</td>
-                <td><input type="checkbox" name="12"/></td>
+                <td>25</td>
+                <td>VER</td>
+                <td>
+                    Verificar la transferencia de la telemetria offline
+                </td>
+                <td><input type="checkbox" name="25"/></td>
             </tr>
-
+            <tr>
+                <td>26</td>
+                <td>DO</td>
+                <td>
+                    Informar a GSN la realizacion de la transferencia de la
+                    telemetria offline<br>
+                    Voice Loop "<b>Fucino, the data transfer is completed</b>" [Ref.09]
+                </td>
+                <td><input type="checkbox" name="26"/></td>
+            </tr>
             <tr>
                 <td></td>
                 <td></td>
